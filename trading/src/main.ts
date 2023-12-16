@@ -5,7 +5,7 @@ import { Logger } from 'nestjs-pino';
 
 import { AppModule } from './app.module';
 import { join } from 'path';
-import { protobufPackage } from './file/file.pb';
+import { protobufPackage } from './trade/trade.pb';
 
 async function bootstrap() {
   const app: INestMicroservice = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule,{
@@ -13,7 +13,7 @@ async function bootstrap() {
   transport: Transport.GRPC,
   options: {
       package: protobufPackage,
-      protoPath: join('node_modules/heredity-protos/proto/file.proto'),
+      protoPath: join('node_modules/trading-bot-protos/proto/trade.proto'),
       url: '0.0.0.0:50052',
       maxReceiveMessageLength: 10 * 1024 * 1024, // for 10MB
       maxSendMessageLength: 10 * 1024 * 1024 // for 10MB

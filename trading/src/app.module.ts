@@ -4,7 +4,7 @@ import { LoggerModule } from 'nestjs-pino';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { File, FileSchema } from './schemas/file.schema';
+// import { File, FileSchema } from './schemas/file.schema';
 
 
 @Module({
@@ -13,7 +13,7 @@ import { File, FileSchema } from './schemas/file.schema';
     MongooseModule.forRoot(
       'mongodb+srv://cozz:cooldude@cluster0.nevjemp.mongodb.net/?retryWrites=true&w=majority',
     ),
-    MongooseModule.forFeature([{ name: File.name, schema: FileSchema }]),
+    // MongooseModule.forFeature([{ name: File.name, schema: FileSchema }]),
 
   ],
   controllers: [AppController],

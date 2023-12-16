@@ -3,8 +3,8 @@ import { GrpcMethod } from '@nestjs/microservices';
 import { PinoLogger, InjectPinoLogger } from 'nestjs-pino';
 
 import { AppService } from './app.service';
-import { FILE_SERVICE_NAME, UploadResponse } from './file/file.pb';
-import { UploadFileDto } from './file/file.dto';
+// import { FILE_SERVICE_NAME, UploadResponse } from './file/file.pb';
+// import { UploadFileDto } from './file/file.dto';
 
 @Controller()
 export class AppController {
